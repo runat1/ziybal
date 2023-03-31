@@ -46,16 +46,13 @@
 <table>
   <tr>
     <th>Id</th>
-    <th>Name</th>
-    <th>Surname</th>
-    <th>Age</th>
-    <th>Action</th>
+    <th>FirstName</th>
+    <th>lastName</th>
   </tr>
   <tr th:each="user : ${users}">
     <td th:text="${user.getId()}"></td>
-    <td th:text="${user.getName()}"></td>
-    <td th:text="${user.getSurname()}"></td>
-    <td th:text="${user.getAge()}"></td>
+    <td th:text="${user.getFirstName()}"></td>
+    <td th:text="${user.getLastName()}"></td>
     <td>
       <a th:href="@{/{id}/edit (id = ${user.getId()})}">
         <input type="button" value="Edit"/>

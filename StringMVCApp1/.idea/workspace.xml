@@ -376,8 +376,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -401,6 +401,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2NHam6yJwtWuVyWirS6b848iyXE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -413,7 +416,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/pretProgect/Новая папка/chek/StringMVCApp1/src/main/java/web",
+    "last_opened_file_path": "C:/pretProgect/blok22/test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -445,8 +448,8 @@
       <recent name="C:\pretProgect\StringMVCApp1\src\main\java\web" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="web.config" />
       <recent name="web.model" />
+      <recent name="web.config" />
       <recent name="web.controller" />
       <recent name="web" />
     </key>
@@ -488,14 +491,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in StringMVCApp1 (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StringMVCApp1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="All in StringMVCApp1 (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StringMVCApp1" />
       <option name="PACKAGE_NAME" value="" />
@@ -509,7 +504,7 @@
       <deployment>
         <artifact name="spring-mvc-app-java-config:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/spring_mvc_app_java_config_war_exploded" />
+            <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
@@ -591,21 +586,60 @@
         </option>
       </method>
     </configuration>
+    <configuration name="users.html" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.73" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/WEB-INF/pages/users.html" />
+      <deployment>
+        <artifact name="spring-mvc-app-java-config:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/spring_mvc_app_java_config_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="5fcc3c0f-698a-4998-bb65-4ad200722182" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="spring-mvc-app-java-config:war" />
+        </option>
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Test" />
       <item itemvalue="Application.MainApp" />
       <item itemvalue="Application.CarController" />
-      <item itemvalue="JUnit.All in StringMVCApp1 (2)" />
       <item itemvalue="JUnit.All in StringMVCApp1 (3)" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.73" />
+      <item itemvalue="Tomcat Server.users.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Tomcat Server.users.html" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.MainApp" />
         <item itemvalue="Application.CarController" />
         <item itemvalue="JUnit.All in StringMVCApp1 (3)" />
-        <item itemvalue="JUnit.All in StringMVCApp1 (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -638,6 +672,7 @@
       <workItem from="1680191381931" duration="8000" />
       <workItem from="1680191613508" duration="180000" />
       <workItem from="1680191884536" duration="5547000" />
+      <workItem from="1680269520979" duration="8161000" />
     </task>
     <servers />
   </component>

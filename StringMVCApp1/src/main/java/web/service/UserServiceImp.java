@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class UserServiceImp implements UserService {
 
-   private final UserDao userDao;
+   private static UserDao userDao;
 
    public UserServiceImp(UserDao userDao) {
       this.userDao = userDao;
@@ -20,5 +20,15 @@ public class UserServiceImp implements UserService {
    @Transactional
    public void addUser(User user) {
       userDao.addUser(user);
+   }
+
+   @Override
+   public List<User> getListOfUsers() {
+      return userDao.getListOfUsers();
+   }
+
+   public static void addUS(User user){
+      userDao.addUser(user);
+
    }
 }

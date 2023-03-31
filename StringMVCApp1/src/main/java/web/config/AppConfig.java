@@ -24,51 +24,51 @@ import java.util.Properties;
 @ComponentScan("web")
 public class AppConfig {
 
-   private final Environment env;
+    private final Environment env;
 
-   public AppConfig(Environment env) {
-      this.env = env;
-   }
+    public AppConfig(Environment env) {
+        this.env = env;
+    }
 
-   @Bean
-   public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
-      LocalContainerEntityManagerFactoryBean em
-              = new LocalContainerEntityManagerFactoryBean();
-      em.setDataSource(getDataSource());
-      em.setPackagesToScan("web");
+    @Bean
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+        LocalContainerEntityManagerFactoryBean em
+                = new LocalContainerEntityManagerFactoryBean();
+        em.setDataSource(getDataSource());
+        em.setPackagesToScan("web");
 
-      JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-      em.setJpaVendorAdapter(vendorAdapter);
-      em.setJpaProperties(additionalProperties());
-      return em;
-   }
+        JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+        em.setJpaVendorAdapter(vendorAdapter);
+        em.setJpaProperties(additionalProperties());
+        return em;
+    }
 
-   @Bean
-   public DataSource getDataSource() {
-      DriverManagerDataSource dataSource = new DriverManagerDataSource();
-      dataSource.setDriverClassName(Objects.requireNonNull(env.getProperty("db.driver")));
-      dataSource.setUrl(env.getProperty("db.url"));
-      dataSource.setUsername(env.getProperty("db.username"));
-      dataSource.setPassword(env.getProperty("db.password"));
-      return dataSource;
-   }
+    @Bean
+    public DataSource getDataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(Objects.requireNonNull(env.getProperty("db.driver")));
+        dataSource.setUrl(env.getProperty("db.url"));
+        dataSource.setUsername(env.getProperty("db.username"));
+        dataSource.setPassword(env.getProperty("db.password"));
+        return dataSource;
+    }
 
-   @Bean
-   public PlatformTransactionManager transactionManager() {
-      JpaTransactionManager transactionManager = new JpaTransactionManager();
-      transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
-      return transactionManager;
-   }
+    @Bean
+    public PlatformTransactionManager transactionManager() {
+        JpaTransactionManager transactionManager = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
+        return transactionManager;
+    }
 
-   @Bean
-   public PersistenceExceptionTranslationPostProcessor exceptionTranslation() {
-      return new PersistenceExceptionTranslationPostProcessor();
-   }
+    @Bean
+    public PersistenceExceptionTranslationPostProcessor exceptionTranslation() {
+        return new PersistenceExceptionTranslationPostProcessor();
+    }
 
-   Properties additionalProperties() {
-      Properties properties = new Properties();
-      properties.setProperty("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
-      properties.setProperty("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
-      return properties;
-   }
+    Properties additionalProperties() {
+        Properties properties = new Properties();
+        properties.setProperty("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
+        properties.setProperty("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
+        return properties;
+    }
 }
