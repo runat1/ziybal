@@ -35,7 +35,8 @@ public class HelloController {
 
 	@GetMapping("/cars")
 	public String getCar(Model model, @RequestParam (value = "name") String name,@RequestParam (value = "lname") String lname) {
-		model.addAttribute("user", new User(name,lname));
+		model.addAttribute("user",new User());
+		userService.addUser( new User(name,lname));
 		return "new";
 	}
 	@PostMapping
